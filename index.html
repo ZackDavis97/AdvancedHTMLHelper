@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+    <!--For the best results for this tutorial open this page with Live Server-->
 <head>
+    <!-- UTF-8 stands for Unicode Transformation Format, most widely used way to represent Unicode text in web pages and should be used on every web page.-->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,17 +18,158 @@
                 text-decoration: underline;
             }
         </style>
-        <header class="helloworld">
-            <h1>Learning Advanced HTML</h1>
+        <header class="helloworld" id="top">
+            <!-- "<" is seen as a reserved character, so if you want to use it on a website you have to use "&lt;" as seen on the next line of code. A website for a full HTML entity list will be included-->
+            <h1>Learning &lt;Advanced HTML</h1>
             <p>By Zack Davis</p>
+            <p>The entity list below will help guide you to a webpage that shows all entities available in HTML.</p>
+            <a href="https://www.freeformatter.com/html-entities.html">HTML Entity List</a>
         </header>
         <section>
             <h2>Learning Advanced HTML</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi rem veniam consequuntur obcaecati ex perferendis placeat, nostrum accusantium ducimus adipisci voluptatibus? Esse unde minima magni. Vel temporibus eveniet possimus distinctio.</p>
         </section>
 
+
+        <picture>
+            <!--What this is doing is, based off of the pixel size of the page a different picture will appear when the criteria has been met. So the img on line 36 will be shown for a smaller screen and as the screen gets bigger it'll work up to the 720px img-->
+            <source srcset="http://placekitten.com/700" media="(min-width: 720px);">
+            <source srcset="http://placekitten.com/400" media="(min-width: 420px);">
+            <img src="http://placekitten.com/200" alt="A Cute cat" title="A Cute Cat"> 
+        </picture>
+
+        <!-- simplest way to add a video is to add an element and fill out the space. A placeholder has been added to show on the server.-->
+        <!-- using youtube videos needs an <iframe> not <video>-->
+        <video width="100%" height="100%" poster="https://placehold.it/1200X500" controls="">
+            <!--A great use for source is if you want multiple sources, if one goes down you have another one in its place. So you always have a video of some kind.-->
+            <source src="https://trailers.apple.com/trailers/sony_pictures/uncharted/"
+            type="video/mp4">
+        </video>
+        
+        <form>
+            <!--The progress bar seen below has no logic/Javascript right now, but as seen on the webpage with improvement the bar in the future will fill up as the page gets filled out-->
+            <label for="file">Form Progress</label>
+            <progress id="file" value="25" max="100">25%</progress>
+            <!-- the labels for both inputs connect the names and give logic to the displays of the boxes-->
+            <label for="name">Name:</label>
+            <!-- Adds html element on the right into a webpage and you can type any text/number and will turn it into a string-->
+            <!--required makes it so when the submit button is pushed on the page, if you have not filled out name it will highlight letting you know it is required.-->
+            <input name="name" required="required" type="text">
+
+            <label for="telephone">Tel:</label>
+            <!--Now you only have the ability to type numbers in the box-->
+            <input name="telephone" type="number">
+            <!-- This Select feature creates a very quick and simple drop down menu-->
+            <select>
+                <option>Choice 1</option>
+                <option>Choice 2</option>
+                <option>Choice 3</option>
+            </select>
+            <!-- More examples of inout and label for an email and termsandservices-->
+            <label for="email">Email:</label>
+            <!-- the placeholder attribute for email allows you to see it wants an email and also when you type inside the box the text automatically goes away-->
+            <input type="email" placeholder="give me email" name="email">
+            
+            <label for="termsandservices">Do you agree to our terms and services?</label>
+            <input type="checkbox" name="termsandservices">
+            <!-- button works but functionality needs Javascript-->
+            <button>Submit</button>
+        </form>
+        <!--<pre> helps with pre-formatting without HTML adjusting to a page. Basically it retains the exact code put in.-->
+        <pre>
+            {
+                if (BillNye === 'Lit') {
+                    console.log('correct')
+                } else {
+                    console.log('Clearly not born in 90's')
+                }
+            }
+        </pre>
+        <!-- As seen here, without <pre> and only using a normal <p> the text adjusts to the HTML-->
+        <p>
+            {
+                if (Shaq === 'Tall') {
+                    console.log('Correct')
+                } else {
+                    console.log('Are you blind?')
+                }
+            }
+        </p>
+
         <footer>
             <p>Zack Davis - <span class="underline">Copyright 2021</span></p>
+<!-- breaks used to give basic depth for the tutorial-->
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<!-- middle of the page linked at the bottom for quick access-->
+<h2 id="middle">Middle</h2>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+            <!--this targets a specific id(#) "top" to take us to the top of the page-->
+            <a href="#top">Top</a>
+            <a href="#middle">Middle</a>
         </footer>
     </body>
 </html>
